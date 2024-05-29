@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserLoginRegistration.Views.LoginPage"
+             Title="LoginPage">
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Source="robot.png" Aspect="AspectFill" />
+        <Grid BackgroundColor="White" Opacity=".5"></Grid>
+        <Grid ColumnDefinitions="*,*">
+            <Image Grid.Column="0" Source="logo.png" HeightRequest="80" Aspect="AspectFit"/>
+            <Image Grid.Column="1" Source="logo.png" HeightRequest="80" Aspect="AspectFit"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2" CornerRadius="30,30,0,0" Fill="White"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold" FontFamily="bold" FontSize="Medium" Text="Welcome!" TextColor="#2d2d2d"/>
+                <Label FontSize="Medium" Text="Log in to continue" TextColor="#a3a3a4"/>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
+                    <RoundRectangle BackgroundColor="White"  CornerRadius="10" HeightRequest="60"
+                                    HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="60"/>
+                    <Image HorizontalOptions="Center" >
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="Londrina"
+                                Glyph="&#xf0e0;"
+                                Size="44"
+                                Color="#4f3f9b"/>
+                        </Image.Source>
+                    </Image>
+                </Grid>
+            </VerticalStackLayout>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

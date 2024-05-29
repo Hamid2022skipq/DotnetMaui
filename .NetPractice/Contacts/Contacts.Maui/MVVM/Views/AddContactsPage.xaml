@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Contacts.Maui.MVVM.Views.Controls"
+             x:Class="Contacts.Maui.MVVM.Views.AddContactsPage"
+             Shell.BackgroundColor="LightSeaGreen"
+             Title="Add Contacts">
+    <Shell.TitleView>
+        <Label Text="Add Contacts"
+           VerticalTextAlignment="Center"
+           FontSize="Title"
+           TextColor="White" />
+    </Shell.TitleView>
+    <VerticalStackLayout>
+        <Label 
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <controls:ContactControl x:Name="contactCtrl" OnSave="contactCtrl_OnSave"
+                          OnCancle="contactCtrl_OnCancle" ></controls:ContactControl>
+
+    </VerticalStackLayout>
+</ContentPage>

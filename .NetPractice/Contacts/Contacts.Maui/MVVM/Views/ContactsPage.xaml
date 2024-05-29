@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contacts.Maui.MVVM.Views.ContactsPage"
+             Shell.BackgroundColor="LightSeaGreen"
+             Title="Contacts">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Contacts" VerticalTextAlignment="Center" FontSize="Title" TextColor="White" HorizontalOptions="StartAndExpand" />
+            <Image Margin="0,0,20,0" ToolTipProperties.Text="Click to add new contacts">
+                <Image.Source>
+                    <FontImageSource
+                        Glyph="+"
+                        FontFamily="FontAwesome"
+                        Size="40"
+                        Color="White" />
+                </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </Shell.TitleView>
+
+    <Grid RowDefinitions="50,*,100"
+          ColumnDefinitions="*"
+        >
+        <SearchBar 
+            Grid.Row="0"
+            Grid.Column="0"
+            Placeholder="Search Content"
+            TextChanged="SearchBar_TextChanged">
+            <!-- SearchButtonPressed="SearchBar_SearchButtonPressed"--> 
+        </SearchBar>
+    <ListView 
+        BackgroundColor="Transparent" 
+        ItemSelected="ListContacts_ItemSelected"
+        ItemTapped="ListContacts_ItemTapped" 
+        x:Name="ListContacts"
+        SeparatorColor="Silver" 
+        RowHeight="60"
+        Grid.Row="1"
+        Grid.Column="0"
+        >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Email}"  ToolTipProperties.Text="your saved contacts">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete" IsDestructive="True" Clicked="MenuItem_Clicked" CommandParameter="{Binding .}"></MenuItem>
+                        </TextCell.ContextActions></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        <Button 
+        Grid.Row="2" 
+        Grid.Column="0"
+        x:Name="BtnAdd"
+        Text="Add Contact"
+        Clicked="BtnAdd_Clicked" 
+        ToolTipProperties.Text="Click to add new contacts"
+        BackgroundColor="LightSeaGreen"
+        BorderColor="AntiqueWhite" 
+        BorderWidth="2"
+        Margin="20,20,20,20"
+        TextColor="Cornsilk" 
+        FontAttributes="Bold"></Button>
+    </Grid>
+</ContentPage>

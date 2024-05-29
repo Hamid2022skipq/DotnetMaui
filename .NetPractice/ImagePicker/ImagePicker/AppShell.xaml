@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ImagePicker.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ImagePicker"
+    xmlns:vm="clr-namespace:ImagePicker.MVVM.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="JOBS" Icon="home.png">
+            <ShellContent Title="JOBS" Icon="home.png" ContentTemplate="{DataTemplate vm:ImagePickerViews}" />
+        </Tab>
+        <Tab Title="POST JOB" Icon="camera_plus.svg">
+            <ShellContent Title="POST JOB" Icon="camera_plus.svg" ContentTemplate="{DataTemplate vm:ImagePickerViews}" />
+        </Tab>
+        <Tab Title="MY JOBS" Icon="building.png">
+            <ShellContent Title="MY JOBS" Icon="building.png" ContentTemplate="{DataTemplate vm:ImagePickerViews}" />
+        </Tab>
+        <Tab Title="CHATS" Icon="chat.png">
+            <ShellContent Title="CHATS" Icon="speech.png" ContentTemplate="{DataTemplate vm:ImagePickerViews}" />
+        </Tab>
+        <Tab Title="ALERTS" Icon="bell.png">
+            <ShellContent Title="ALERTS" Icon="bell.png" ContentTemplate="{DataTemplate vm:ImagePickerViews}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

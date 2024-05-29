@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "626398064806",
+    "project_id": "pushnotificationmauidotnet",
+    "storage_bucket": "pushnotificationmauidotnet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626398064806:android:99b5a0e62e1dc55d9a0467",
+        "android_client_info": {
+          "package_name": "com.companyname.pushnotificationwithfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA52O9JWejtJ8gYN3Y4pFnDxZ_vit-YC9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

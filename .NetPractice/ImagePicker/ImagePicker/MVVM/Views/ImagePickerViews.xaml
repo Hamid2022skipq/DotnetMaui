@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImagePicker.MVVM.Views.ImagePickerViews"
+    >
+    <StackLayout>
+        <Grid RowDefinitions="250,290,auto">
+            <StackLayout Grid.Row="0" BackgroundColor="Gray" Opacity=".9">
+                <ImageButton x:Name="pickImageButton" 
+                    Source="ic_launcher.png"
+                     HorizontalOptions="Center" 
+                     VerticalOptions="Center"
+                     HeightRequest="100"
+                     WidthRequest="100"
+                     Margin="0,65,0,0"
+                    Clicked="pickImageButton_Clicked"     
+                     />
+
+                <!--Source="{Binding PixckedImageSource}"-->
+                <!--Command="{Binding PickImageCommand}"
+                IsEnabled="{Binding IsButtonEnabled}"-->
+
+                <Image
+                    x:Name="ImagePicked" 
+                    Source=""
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center"
+                    HeightRequest="200"
+                    WidthRequest="200" 
+                 />
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Grid>
+                    <Image Source="text_bubble.png" Aspect="AspectFill"/>
+                    <Label Text="Take some pics of your job or select images from your gallery.
+                           Jobs with pics, get more quotes."
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Black"
+                           FontSize="12"
+                           Margin="40,-18,30,0"
+                           BackgroundColor="Transparent"/>
+                </Grid>
+                <Image Source="owl_client_quote_accepted.png" WidthRequest="100" Margin="0" HeightRequest="100"/>
+            </StackLayout>
+            <Button Grid.Row="2" Text="Continue" TextColor="White"
+                    BackgroundColor="DeepPink" Opacity="1" Margin="0" TextTransform="Uppercase" 
+                    FontSize="16" HeightRequest="60" CornerRadius="0"/>
+        </Grid>
+    </StackLayout>
+
